@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#061a35">
+  <title>Privatbereich | HSV-Visitenkarte</title>
+  <link rel="stylesheet" href="/privat.css">
+  <script type="module" src="/privat.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="/#werdegang" aria-label="Zur HSV-Visitenkarte">HSV <span>Privatbereich</span></a>
+    <a class="back-link" href="/#werdegang">Zurück zum Werdegang</a>
+  </header>
+
+  <main class="page-shell">
+    <div class="eyebrow"><span class="lock-dot" aria-hidden="true"></span> Geschützter Bereich</div>
+    <h1>Privat. Sicher. Nur für Freigegebene.</h1>
+    <p class="intro">Melde dich mit deinem Manus-Konto an. Für den Admin-Zugang ist zusätzlich ein Einmalcode aus der Authenticator-App erforderlich.</p>
+
+    <p id="notice" class="notice" role="status" aria-live="polite" hidden></p>
+
+    <section class="preview-gallery" aria-labelledby="preview-gallery-title">
+      <div class="preview-banner">
+        <p class="eyebrow">Lokale Layoutvorschau · keine Anmeldung</p>
+        <h2 id="preview-gallery-title">Nutzer- und Adminoberfläche</h2>
+        <p>Beide Ansichten sind reine Layoutdemos mit synthetischen Beispieldaten. Sie zeigen keine echten privaten Informationen, starten keine Adminaktion und ersetzen weder Anmeldung noch MFA.</p>
+      </div>
+      <div class="preview-demo-grid">
+        <details class="preview-demo-card" open>
+          <summary><span>Nutzerportal</span><span class="demo-label">Synthetische Vorschau</span></summary>
+          <div class="demo-content">
+            <div class="demo-profile-row">
+              <span class="demo-avatar" aria-hidden="true">N</span>
+              <div class="demo-profile-copy">
+                <p class="eyebrow">Beispielkonto</p>
+                <h3>HSV-Nutzerkonto 01</h3>
+                <p class="demo-muted">nutzer-01@example.test</p>
+              </div>
+              <span class="demo-status">Freigabe · Demo</span>
+            </div>
+            <div class="demo-pill-row"><span class="demo-pill">MFA-Status · Beispiel</span><span class="demo-pill">Sitzung · Vorschau</span></div>
+            <div class="demo-surface">
+              <h4>Private Kontaktdaten</h4>
+              <dl class="demo-facts">
+                <div><dt>Telefon</dt><dd>Nicht hinterlegt</dd></div>
+                <div><dt>E-Mail</dt><dd>nutzer-01@example.test</dd></div>
+                <div><dt>Adresse</dt><dd>Beispieladresse · Musterstadt</dd></div>
+              </dl>
+            </div>
+            <div class="demo-surface">
+              <div class="demo-section-title"><h4>Geschützte Dokumente</h4><span>1 Beispieldatei</span></div>
+              <div class="demo-document-row"><div><strong>Beispieldokument.pdf</strong><span class="demo-muted">Nur Platzhalter · kein Download</span></div><button class="button button-subtle" type="button" disabled>Nur Vorschau</button></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="preview-demo-card" open>
+          <summary><span>Admin-Portal</span><span class="demo-label">Synthetische Vorschau</span></summary>
+          <div class="demo-content">
+            <div class="demo-admin-heading">
+              <p class="eyebrow">Beispielhafte Administration · MFA erforderlich</p>
+              <h3>Zugänge &amp; Dokumente verwalten</h3>
+              <p class="demo-muted">Drei gleichberechtigte Admin-Rollen · ausschließlich Demodaten</p>
+            </div>
+            <div class="demo-stat-grid">
+              <div><strong>02</strong><span>Offene Anfragen</span></div>
+              <div><strong>03</strong><span>Admins (Demo)</span></div>
+              <div><strong>08</strong><span>Dokumente (Demo)</span></div>
+            </div>
+            <div class="demo-surface">
+              <div class="demo-section-title"><h4>Freigabeanfragen</h4><span>Beispiel</span></div>
+              <div class="demo-user-row"><div><strong>demo-person-01@example.test</strong><span class="demo-muted">Neue Anfrage · synthetisch</span></div><button class="button button-primary" type="button" disabled>Freigeben · Demo</button></div>
+              <div class="demo-user-row"><div><strong>demo-person-02@example.test</strong><span class="demo-muted">Wartet auf Prüfung · synthetisch</span></div><button class="button button-subtle" type="button" disabled>Verwalten · Demo</button></div>
+            </div>
+            <div class="demo-surface">
+              <div class="demo-section-title"><h4>Gleichberechtigte Admins</h4><span>Alle mit MFA · Demo</span></div>
+              <ul class="demo-admin-list"><li>admin-01@example.test</li><li>admin-02@example.test</li><li>admin-03@example.test</li></ul>
+            </div>
+            <div class="demo-surface demo-document-row"><div><strong>Dokumentenverwaltung</strong><span class="demo-muted">Beispieldokument.pdf · Aktionen deaktiviert</span></div><button class="button button-subtle" type="button" disabled>Nur Vorschau</button></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="login-panel" class="glass-panel login-panel" hidden>
+      <div class="panel-mark" aria-hidden="true">H</div>
+      <div>
+        <h2>Mit Manus anmelden</h2>
+        <p>Der Zugriff wird serverseitig geprüft. Nicht freigegebene Konten erhalten keinen Zugang.</p>
+        <label class="remember-option"><input id="remember-device" type="checkbox"> Auf diesem Gerät bis zu 30 Tage angemeldet bleiben</label>
+        <button id="login-button" class="button button-primary" type="button">Sicher mit Manus anmelden</button>
+      </div>
+    </section>
+
+    <section id="auth-panel" class="glass-panel" hidden>
+      <div class="account-row">
+        <div>
+          <p class="eyebrow">Angemeldet als</p>
+          <h2 id="account-name">—</h2>
+          <p id="account-email" class="muted"></p>
+        </div>
+        <button id="logout-button" class="button button-subtle" type="button">Abmelden</button>
+      </div>
+
+      <section id="mfa-setup-panel" class="security-panel" hidden>
+        <h2>Authenticator-App einrichten</h2>
+        <p>Scanne den QR-Code mit deiner Authenticator-App oder trage den Schlüssel manuell ein. Die Einrichtung wird erst nach Bestätigung eines gültigen Codes aktiviert.</p>
+        <div class="enrollment-grid">
+          <img id="mfa-qr" class="qr-code" alt="QR-Code zur Einrichtung der Authenticator-App">
+          <div class="secret-box">
+            <span class="field-label">Manueller Schlüssel</span>
+            <code id="mfa-secret"></code>
+            <button id="copy-secret" class="button button-subtle" type="button">Schlüssel kopieren</button>
+            <a id="otpauth-link" class="text-link" href="#">Authenticator-App öffnen</a>
+          </div>
+        </div>
+        <form id="setup-form" class="inline-form">
+          <label for="setup-code">6-stelliger App-Code</label>
+          <div class="form-row"><input id="setup-code" name="token" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required><button class="button button-primary" type="submit">Einrichtung bestätigen</button></div>
+        </form>
+      </section>
+
+      <section id="mfa-verify-panel" class="security-panel" hidden>
+        <h2>Zusätzliche Bestätigung</h2>
+        <p>Gib den sechsstelligen Code aus deiner Authenticator-App ein. Alternativ kannst du einen noch nicht verwendeten Wiederherstellungscode nutzen.</p>
+        <form id="verify-form" class="inline-form">
+          <label for="verify-code">App- oder Wiederherstellungscode</label>
+          <div class="form-row"><input id="verify-code" name="token" autocomplete="one-time-code" autocapitalize="characters" required><button class="button button-primary" type="submit">Zugang bestätigen</button></div>
+        </form>
+      </section>
+
+      <section id="recovery-panel" class="security-panel recovery-panel" hidden>
+        <h2>Wiederherstellungscodes sicher speichern</h2>
+        <p>Jeder Code kann nur einmal verwendet werden. Diese Codes werden nur bei der Einrichtung angezeigt und nicht erneut vom Server ausgegeben.</p>
+        <ol id="recovery-codes" class="recovery-codes"></ol>
+        <div class="button-row"><button id="copy-recovery" class="button button-primary" type="button">Codes kopieren</button><button id="download-recovery" class="button button-subtle" type="button">Als Textdatei speichern</button><button id="dismiss-recovery" class="button button-subtle" type="button">Sicher gespeichert</button></div>
+      </section>
+    </section>
+
+    <section id="private-panel" class="private-layout" hidden>
+      <div class="glass-panel private-card">
+        <div class="section-heading"><div><p class="eyebrow">Nur für dich</p><h2>Private Kontaktdaten</h2></div><span class="secure-badge">Verschlüsselte Sitzung</span></div>
+        <dl id="private-contact-list" class="contact-list"></dl>
+      </div>
+
+      <div class="glass-panel private-card">
+        <div class="section-heading"><div><p class="eyebrow">Geschützter Zugriff</p><h2>Dokumente</h2></div></div>
+        <p class="muted">Dokumentlinks sind zeitlich begrenzt und werden erst nach deiner Anmeldung erstellt.</p>
+        <ul id="documents-list" class="documents-list"></ul>
+      </div>
+
+      <section id="admin-panel" class="glass-panel admin-panel" hidden>
+        <div class="section-heading"><div><p class="eyebrow">Administration</p><h2>Zugänge &amp; Dokumente verwalten</h2></div><span class="admin-badge">Admin</span></div>
+
+        <details class="admin-block" open>
+          <summary>Private Kontaktdaten bearbeiten</summary>
+          <form id="profile-form" class="profile-form">
+            <label>Private Telefonnummer<input name="private_phone" type="tel" autocomplete="tel" maxlength="64"></label>
+            <label>Private E-Mail-Adresse<input name="private_email" type="email" autocomplete="email" maxlength="320"></label>
+            <label>Straße und Hausnummer<input name="private_street" autocomplete="street-address" maxlength="255"></label>
+            <div class="two-fields"><label>Postleitzahl<input name="private_zip" autocomplete="postal-code" maxlength="32"></label><label>Ort<input name="private_city" autocomplete="address-level2" maxlength="191"></label></div>
+            <label>Land<input name="country" autocomplete="country-name" maxlength="100"></label>
+            <button class="button button-primary" type="submit">Kontaktdaten speichern</button>
+          </form>
+        </details>
+
+        <details class="admin-block" open>
+          <summary>Dokument hochladen</summary>
+          <form id="upload-form" class="upload-form">
+            <label for="document-file" class="upload-drop-zone" tabindex="0" role="button" aria-describedby="file-drop-help">PDF-Datei auswählen oder hier ablegen</label>
+            <input id="document-file" name="file" type="file" accept="application/pdf,.pdf" required>
+            <p id="file-drop-help" class="muted">Nur PDF, maximal 20 MB. Neue Dokumente sind zunächst nur für den Admin sichtbar.</p>
+            <p id="file-selection-status" class="muted" role="status" aria-live="polite"></p>
+            <button class="button button-primary" type="submit">PDF geschützt hochladen</button>
+          </form>
+        </details>
+
+        <details class="admin-block" open>
+          <summary>Personen freigeben oder sperren</summary>
+          <form id="grant-form" class="grant-form">
+            <label for="grant-email">Manus-Konto (E-Mail-Adresse)</label>
+            <div class="form-row"><input id="grant-email" type="email" maxlength="320" autocomplete="email" required><button class="button button-primary" type="submit">Zugang freigeben</button></div>
+          </form>
+          <div id="users-list" class="users-list"></div>
+        </details>
+
+        <details class="admin-block">
+          <summary>Dokumentenfreigabe und Verwaltung</summary>
+          <p class="muted">„Aus Liste entfernen“ blendet den Eintrag aus. Bereits gespeicherte Objektbytes werden nicht automatisch gelöscht.</p>
+          <div id="admin-documents-list" class="admin-documents-list"></div>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="document-dialog" class="document-dialog" aria-labelledby="document-title">
+    <div class="dialog-header"><h2 id="document-title">Geschütztes Dokument</h2><div class="button-row"><a id="document-download" class="button button-primary" href="#" target="_blank" rel="noopener noreferrer">In neuem Tab öffnen / laden</a><button id="close-document" class="button button-subtle" type="button" aria-label="Dokumentansicht schließen">Schließen</button></div></div>
+    <iframe id="document-frame" title="Geschützte PDF-Ansicht" referrerpolicy="no-referrer"></iframe>
+  </dialog>
+</body>
+</html>

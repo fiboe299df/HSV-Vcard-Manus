@@ -1,0 +1,25 @@
+{
+  "name": "lassehsv-private-card",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "db:migrate": "node scripts/migrate.js",
+    "db:import-private": "node scripts/import-initial-private.js",
+    "audit:privacy": "node scripts/audit-public-leaks.js",
+    "check": "node --check server/index.js && node --check server/auth.js && node --check server/admin.js && node --check server/mfa.js && node --check server/matches.js && node --check server/security.js && node --check server/storage.js && node --check scripts/migrate.js && node --check scripts/import-initial-private.js && node --check scripts/audit-public-leaks.js && node --check public/privat.js && node --check public/card-enhancements.js"
+  },
+  "dependencies": {
+    "express": "5.3.0",
+    "multer": "2.5.0",
+    "mysql2": "3.24.6",
+    "otpauth": "9.6.0",
+    "qrcode": "1.5.4"
+  }
+}
